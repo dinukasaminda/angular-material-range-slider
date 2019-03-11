@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+.mat-slidef-thumb {
+  background-color: #228ee2 !important;
+}
+.mat-slidef-track-background {
+  background-color: #212121 !important;
+}
+.mat-slidef-track-fill,
+.mat-slidef-thumb-label {
+  background-color: #228ee2 !important;
+}

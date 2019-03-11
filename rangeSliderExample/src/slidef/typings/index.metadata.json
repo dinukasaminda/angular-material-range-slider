@@ -1,0 +1,436 @@
+{
+    "__symbolic": "module",
+    "version": 3,
+    "metadata": {
+        "MatSlidefModule": {
+            "__symbolic": "class",
+            "decorators": [{
+                "__symbolic": "call",
+                "expression": {
+                    "__symbolic": "reference",
+                    "module": "@angular/core",
+                    "name": "NgModule"
+                },
+                "arguments": [{
+                    "imports": [{
+                            "__symbolic": "reference",
+                            "module": "@angular/common",
+                            "name": "CommonModule"
+                        },
+                        {
+                            "__symbolic": "reference",
+                            "module": "@angular/material/core",
+                            "name": "MatCommonModule"
+                        },
+                        {
+                            "__symbolic": "reference",
+                            "module": "@angular/cdk/bidi",
+                            "name": "BidiModule"
+                        },
+                        {
+                            "__symbolic": "reference",
+                            "module": "@angular/cdk/a11y",
+                            "name": "A11yModule"
+                        }
+                    ],
+                    "exports": [
+                        { "__symbolic": "reference", "name": "MatSlidef" },
+                        {
+                            "__symbolic": "reference",
+                            "module": "@angular/material/core",
+                            "name": "MatCommonModule"
+                        }
+                    ],
+                    "declarations": [
+                        { "__symbolic": "reference", "name": "MatSlidef" }
+                    ],
+                    "providers": [{
+                        "provide": {
+                            "__symbolic": "reference",
+                            "module": "@angular/platform-browser",
+                            "name": "HAMMER_GESTURE_CONFIG"
+                        },
+                        "useClass": {
+                            "__symbolic": "reference",
+                            "module": "@angular/material/core",
+                            "name": "GestureConfig"
+                        }
+                    }]
+                }]
+            }],
+            "members": {}
+        },
+        "MAT_Slidef_VALUE_ACCESSOR": {
+            "provide": {
+                "__symbolic": "reference",
+                "module": "@angular/forms",
+                "name": "NG_VALUE_ACCESSOR"
+            },
+            "useExisting": { "__symbolic": "reference", "name": "MatSlidef" },
+            "multi": true
+        },
+        "MatSlidefChange": { "__symbolic": "class", "members": {} },
+        "MatSlidefBase": {
+            "__symbolic": "class",
+            "members": {
+                "__ctor__": [{
+                    "__symbolic": "constructor",
+                    "parameters": [{
+                            "__symbolic": "reference",
+                            "module": "@angular/core",
+                            "name": "Renderer2"
+                        },
+                        {
+                            "__symbolic": "reference",
+                            "module": "@angular/core",
+                            "name": "ElementRef"
+                        }
+                    ]
+                }]
+            }
+        },
+        "_MatSlidefMixinBase": {
+            "__symbolic": "call",
+            "expression": {
+                "__symbolic": "reference",
+                "module": "@angular/material/core",
+                "name": "mixinColor"
+            },
+            "arguments": [{
+                    "__symbolic": "call",
+                    "expression": {
+                        "__symbolic": "reference",
+                        "module": "@angular/material/core",
+                        "name": "mixinDisabled"
+                    },
+                    "arguments": [{ "__symbolic": "reference", "name": "MatSlidefBase" }]
+                },
+                "accent"
+            ]
+        },
+        "MatSlidef": {
+            "__symbolic": "class",
+            "extends": { "__symbolic": "reference", "name": "_MatSlidefMixinBase" },
+            "decorators": [{
+                "__symbolic": "call",
+                "expression": {
+                    "__symbolic": "reference",
+                    "module": "@angular/core",
+                    "name": "Component"
+                },
+                "arguments": [{
+                    "moduleId": {
+                        "__symbolic": "select",
+                        "expression": { "__symbolic": "reference", "name": "module" },
+                        "member": "id"
+                    },
+                    "selector": "mat-slidef",
+                    "exportAs": "matSlidef",
+                    "providers": [{
+                        "__symbolic": "reference",
+                        "name": "MAT_Slidef_VALUE_ACCESSOR"
+                    }],
+                    "host": {
+                        "(focus)": "_onFocus()",
+                        "(blur)": "_onBlur()",
+                        "(click)": "_onClick($event)",
+                        "(keydown)": "_onKeydown($event)",
+                        "(keyup)": "_onKeyup()",
+                        "(mouseenter)": "_onMouseenter()",
+                        "(slide)": "_onSlide($event)",
+                        "(slideend)": "_onSlideEnd()",
+                        "(slidestart)": "_onSlideStart($event)",
+                        "class": "mat-slidef",
+                        "role": "slidef",
+                        "tabindex": "0",
+                        "[attr.aria-disabled]": "disabled",
+                        "[attr.aria-valuemax]": "max",
+                        "[attr.aria-valuemin]": "min",
+                        "[attr.aria-valuenow]": "value",
+                        "[attr.aria-orientation]": "vertical ? \"vertical\" : \"horizontal\"",
+                        "[class.mat-slidef-disabled]": "disabled",
+                        "[class.mat-slidef-has-ticks]": "tickInterval",
+                        "[class.mat-slidef-horizontal]": "!vertical",
+                        "[class.mat-slidef-axis-inverted]": "_invertAxis",
+                        "[class.mat-slidef-sliding]": "_isSliding",
+
+                        "[class.mat-slidef-thumb-label-showing]": "thumbLabel",
+                        "[class.mat-slidef-vertical]": "vertical",
+                        "[class.mat-slidef-min-value]": "_isMinValue",
+                        "[class.mat-slidef-hide-last-tick]": "disabled || _isMinValue && _thumbGap && _invertAxis"
+                    },
+                    "inputs": ["disabled", "color"],
+                    "encapsulation": {
+                        "__symbolic": "select",
+                        "expression": {
+                            "__symbolic": "reference",
+                            "module": "@angular/core",
+                            "name": "ViewEncapsulation"
+                        },
+                        "member": "None"
+                    },
+                    "preserveWhitespaces": false,
+                    "changeDetection": {
+                        "__symbolic": "select",
+                        "expression": {
+                            "__symbolic": "reference",
+                            "module": "@angular/core",
+                            "name": "ChangeDetectionStrategy"
+                        },
+                        "member": "OnPush"
+                    },
+                    "templateUrl": "./template.html",
+                    "styleUrls": ["./style.css"]
+                }]
+            }],
+            "members": {
+                "invert": [{
+                    "__symbolic": "property",
+                    "decorators": [{
+                        "__symbolic": "call",
+                        "expression": {
+                            "__symbolic": "reference",
+                            "module": "@angular/core",
+                            "name": "Input"
+                        }
+                    }]
+                }],
+                "max": [{
+                    "__symbolic": "property",
+                    "decorators": [{
+                        "__symbolic": "call",
+                        "expression": {
+                            "__symbolic": "reference",
+                            "module": "@angular/core",
+                            "name": "Input"
+                        }
+                    }]
+                }],
+                "min": [{
+                    "__symbolic": "property",
+                    "decorators": [{
+                        "__symbolic": "call",
+                        "expression": {
+                            "__symbolic": "reference",
+                            "module": "@angular/core",
+                            "name": "Input"
+                        }
+                    }]
+                }],
+                "startpoint": [{
+                    "__symbolic": "property",
+                    "decorators": [{
+                        "__symbolic": "call",
+                        "expression": {
+                            "__symbolic": "reference",
+                            "module": "@angular/core",
+                            "name": "Input"
+                        }
+                    }]
+                }],
+                "endpoint": [{
+                    "__symbolic": "property",
+                    "decorators": [{
+                        "__symbolic": "call",
+                        "expression": {
+                            "__symbolic": "reference",
+                            "module": "@angular/core",
+                            "name": "Input"
+                        }
+                    }]
+                }],
+
+                "step": [{
+                    "__symbolic": "property",
+                    "decorators": [{
+                        "__symbolic": "call",
+                        "expression": {
+                            "__symbolic": "reference",
+                            "module": "@angular/core",
+                            "name": "Input"
+                        }
+                    }]
+                }],
+                "thumbLabel": [{
+                    "__symbolic": "property",
+                    "decorators": [{
+                        "__symbolic": "call",
+                        "expression": {
+                            "__symbolic": "reference",
+                            "module": "@angular/core",
+                            "name": "Input"
+                        }
+                    }]
+                }],
+                "_thumbLabelDeprecated": [{
+                    "__symbolic": "property",
+                    "decorators": [{
+                        "__symbolic": "call",
+                        "expression": {
+                            "__symbolic": "reference",
+                            "module": "@angular/core",
+                            "name": "Input"
+                        },
+                        "arguments": ["thumb-label"]
+                    }]
+                }],
+                "tickInterval": [{
+                    "__symbolic": "property",
+                    "decorators": [{
+                        "__symbolic": "call",
+                        "expression": {
+                            "__symbolic": "reference",
+                            "module": "@angular/core",
+                            "name": "Input"
+                        }
+                    }]
+                }],
+                "_tickIntervalDeprecated": [{
+                    "__symbolic": "property",
+                    "decorators": [{
+                        "__symbolic": "call",
+                        "expression": {
+                            "__symbolic": "reference",
+                            "module": "@angular/core",
+                            "name": "Input"
+                        },
+                        "arguments": ["tick-interval"]
+                    }]
+                }],
+                "value": [{
+                    "__symbolic": "property",
+                    "decorators": [{
+                        "__symbolic": "call",
+                        "expression": {
+                            "__symbolic": "reference",
+                            "module": "@angular/core",
+                            "name": "Input"
+                        }
+                    }]
+                }],
+                "vertical": [{
+                    "__symbolic": "property",
+                    "decorators": [{
+                        "__symbolic": "call",
+                        "expression": {
+                            "__symbolic": "reference",
+                            "module": "@angular/core",
+                            "name": "Input"
+                        }
+                    }]
+                }],
+                "change": [{
+                    "__symbolic": "property",
+                    "decorators": [{
+                        "__symbolic": "call",
+                        "expression": {
+                            "__symbolic": "reference",
+                            "module": "@angular/core",
+                            "name": "Output"
+                        }
+                    }]
+                }],
+                "input": [{
+                    "__symbolic": "property",
+                    "decorators": [{
+                        "__symbolic": "call",
+                        "expression": {
+                            "__symbolic": "reference",
+                            "module": "@angular/core",
+                            "name": "Output"
+                        }
+                    }]
+                }],
+                "_slidefWrapper": [{
+                    "__symbolic": "property",
+                    "decorators": [{
+                        "__symbolic": "call",
+                        "expression": {
+                            "__symbolic": "reference",
+                            "module": "@angular/core",
+                            "name": "ViewChild"
+                        },
+                        "arguments": ["slidefWrapper"]
+                    }]
+                }],
+                "__ctor__": [{
+                    "__symbolic": "constructor",
+                    "parameterDecorators": [
+                        null,
+                        null,
+                        null,
+                        null, [{
+                            "__symbolic": "call",
+                            "expression": {
+                                "__symbolic": "reference",
+                                "module": "@angular/core",
+                                "name": "Optional"
+                            }
+                        }]
+                    ],
+                    "parameters": [{
+                            "__symbolic": "reference",
+                            "module": "@angular/core",
+                            "name": "Renderer2"
+                        },
+                        {
+                            "__symbolic": "reference",
+                            "module": "@angular/core",
+                            "name": "ElementRef"
+                        },
+                        {
+                            "__symbolic": "reference",
+                            "module": "@angular/cdk/a11y",
+                            "name": "FocusMonitor"
+                        },
+                        {
+                            "__symbolic": "reference",
+                            "module": "@angular/core",
+                            "name": "ChangeDetectorRef"
+                        },
+                        {
+                            "__symbolic": "reference",
+                            "module": "@angular/cdk/bidi",
+                            "name": "Directionality"
+                        }
+                    ]
+                }],
+                "ngOnInit": [{ "__symbolic": "method" }],
+                "ngOnDestroy": [{ "__symbolic": "method" }],
+                "_onMouseenter": [{ "__symbolic": "method" }],
+                "_onClick": [{ "__symbolic": "method" }],
+                "_onSlide": [{ "__symbolic": "method" }],
+                "_onSlideStart": [{ "__symbolic": "method" }],
+                "_onSlideEnd": [{ "__symbolic": "method" }],
+                "_onFocus": [{ "__symbolic": "method" }],
+                "_onBlur": [{ "__symbolic": "method" }],
+                "_onKeydown": [{ "__symbolic": "method" }],
+                "_onKeyup": [{ "__symbolic": "method" }],
+                "_increment": [{ "__symbolic": "method" }],
+                "_updateValueFromPosition": [{ "__symbolic": "method" }],
+                "_emitChangeEvent": [{ "__symbolic": "method" }],
+                "_emitInputEvent": [{ "__symbolic": "method" }],
+                "_updateTickIntervalPercent": [{ "__symbolic": "method" }],
+                "_createChangeEvent": [{ "__symbolic": "method" }],
+                "_calculatePercentage": [{ "__symbolic": "method" }],
+                "_calculateValue": [{ "__symbolic": "method" }],
+                "_clamp": [{ "__symbolic": "method" }],
+                "_getSlidefDimensions": [{ "__symbolic": "method" }],
+                "_focusHostElement": [{ "__symbolic": "method" }],
+                "writeValue": [{ "__symbolic": "method" }],
+                "registerOnChange": [{ "__symbolic": "method" }],
+                "registerOnTouched": [{ "__symbolic": "method" }],
+                "setDisabledState": [{ "__symbolic": "method" }]
+            }
+        }
+    },
+    "origins": {
+        "MatSlidefModule": "./slidef-module",
+        "MAT_Slidef_VALUE_ACCESSOR": "./slidef",
+        "MatSlidefChange": "./slidef",
+        "MatSlidefBase": "./slidef",
+        "_MatSlidefMixinBase": "./slidef",
+        "MatSlidef": "./slidef"
+    },
+    "importAs": "@angular/material/slidef"
+}

@@ -1,0 +1,5 @@
+{
+    "name": "@angular/material/slidef",
+    "typings": "./slidef.d.ts",
+    "main": "./mymaterial-slidef.umd.js"
+}

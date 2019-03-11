@@ -1,0 +1,47 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Example Range slider
+  </h1>
+</div>
+<div class="row">
+  <div class="col-md-8 mr-auto ml-auto">
+    <mat-slidef
+      style="width:100%;"
+      [lang]="'en'"
+      [float_]="false"
+      [thumb-label]="false"
+      [values]="rangeslideData1"
+      [value]="rangeslideData1.range_end"
+      [startRange]="startRange1value"
+      [max]="1000000"
+      [min]="0"
+    >
+    </mat-slidef>
+
+    {{ rangeslideData1 | json }}
+    <div class="my-5">
+      <hr />
+    </div>
+    <mat-slidef
+      style="width:100%;"
+      [lang]="'en'"
+      [float_]="false"
+      [thumb-label]="true"
+      [values]="rangeslideData2"
+      [max]="1000000"
+      [value]="rangeslideData2.range_end"
+      [startRange]="startRange2value"
+      [min]="0"
+    >
+    </mat-slidef>
+    {{ rangeslideData2 | json }}
+  </div>
+</div>
+<div class="row" style="padding-top:100px;">
+  <div class="col-md-8 mr-auto ml-auto">
+    <a target="_blank" href="https://github.com/dinukasaminda/angular-material-range-slider"
+      >Github repository</a
+    >
+  </div>
+</div>
