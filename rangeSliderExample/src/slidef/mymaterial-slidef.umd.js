@@ -2330,7 +2330,8 @@
           //end value precentage
 
           this._percent = this._calculatePercentage(this._value);
-          console.log('_percent:' + this._percent1);
+          this._emitChangeEvent();
+          // console.log('_percent:' + this._percent1);
           // Since this also modifies the percentage, we need to let the change detection know.
           this._changeDetectorRef.markForCheck();
         }
@@ -2361,11 +2362,13 @@
           this._value2 = coercion.coerceNumberProperty(v, this._value2 || 0);
           if (this.values != null) {
             this.values.range_start = this._value2;
+            // console.log("start value change111")
+            this._emitChangeEvent();
           }
 
           //start_value precentage
           this._percent2 = this._calculatePercentage(this._value2);
-          console.log('_percent2:' + this._percent2);
+          // console.log('_percent2:' + this._percent2);
           // Since this also modifies the percentage, we need to let the change detection know.
           this._changeDetectorRef.markForCheck();
         }
@@ -2398,7 +2401,7 @@
           //   this.values.range_start = this._value2;
           // }
           this._startRange = v;
-          console.log(this._startRange);
+          // console.log(this._startRange);
           setTimeout(() => {
             this._value2 = v;
             this.values.range_start = v;

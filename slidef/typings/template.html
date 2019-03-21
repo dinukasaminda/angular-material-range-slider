@@ -1,0 +1,23 @@
+<div class="mat-slidef-wrapper" #slidefWrapper>
+  <div class="mat-slidef-track-wrapper">
+    <div class="mat-slidef-track-background" [ngStyle]="_trackBackgroundStyles"></div>
+    <div class="mat-slidef-track-fill" [ngStyle]="_trackFillStyles"></div>
+  </div>
+  <div class="mat-slidef-ticks-container " [ngStyle]="_ticksContainerStyles">
+    <div class="1mat-slidef-ticks" [ngStyle]="_ticksStyles"></div>
+  </div>
+  <div class="mat-slidef-thumb-container" [ngStyle]="_thumbContainerStyles">
+    <div class="mat-slidef-focus-ring"></div>
+    <div class="mat-slidef-thumb"></div>
+    <div class="mat-slidef-thumb-label">
+      <span class="mat-slidef-thumb-label-text">{{ displayValue }}</span>
+    </div>
+  </div>
+  <div class="mat-slidef-thumb-container" [ngStyle]="_thumbContainerStyles2">
+    <div class="mat-slidef-focus-ring"></div>
+    <div class="mat-slidef-thumb"></div>
+    <div class="mat-slidef-thumb-label">
+      <span class="mat-slidef-thumb-label-text">{{ displayValue2 }}</span>
+    </div>
+  </div>
+</div>

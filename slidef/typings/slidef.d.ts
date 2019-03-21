@@ -47,6 +47,7 @@ export declare class MatSlidef extends _MatSlidefMixinBase
   private _focusMonitor;
   private _changeDetectorRef;
   private _dir;
+
   /** Whether the slidef is inverted. */
   invert: any;
   private _invert;
@@ -95,6 +96,7 @@ export declare class MatSlidef extends _MatSlidefMixinBase
   input: EventEmitter<MatSlidefChange>;
   /** The value to be used for display purposes. */
   readonly displayValue: string | number;
+  readonly displayValue2: string | number;
   /** onTouch function registered via registerOnTouch (ControlValueAccessor). */
   onTouched: () => any;
   /** The percentage of the slidef that coincides with the value. */
@@ -141,6 +143,10 @@ export declare class MatSlidef extends _MatSlidefMixinBase
   readonly _thumbContainerStyles: {
     [key: string]: string;
   };
+  readonly _thumbContainerStyles2: {
+    [key: string]: string;
+  };
+
   /** The size of a tick interval as a percentage of the size of the track. */
   private _tickIntervalPercent;
   /** The dimensions of the slidef. */
